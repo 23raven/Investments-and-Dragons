@@ -8,6 +8,8 @@ public class StockMarketElement : MonoBehaviour
     [SerializeField] private Image stockIcon;
     [SerializeField] private TMP_Text stockName;
     [SerializeField] private TMP_Text currentPrice;
+    [SerializeField] private StockPage stockPage;
+
 
     private void Start()
     {

@@ -6,16 +6,18 @@ public class Stock : MonoBehaviour
     [SerializeField] private int id;
     [SerializeField] private int currentPrice;
     [SerializeField] private string stockName;
-    [SerializeField] private Sprite stockIcon;
     [SerializeField] private string stockDescription;
+    [SerializeField] private Sprite stockIcon;
+    [SerializeField] private Sprite stockImage;
 
-    public List<int> priceHistory = new();
+    private List<int> priceHistory = new();
 
     public int Id => id;
     public int CurrentPrice => currentPrice;
     public string StockName => stockName;
-    public Sprite StockIcon => stockIcon;
     public string StockDescription => stockDescription;
+    public Sprite StockIcon => stockIcon;
+    public Sprite StockImage => stockImage;
 
     public void UpdatePrice(int newPrice)
     {
