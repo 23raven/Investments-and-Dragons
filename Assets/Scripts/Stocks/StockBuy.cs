@@ -94,4 +94,10 @@ public class StockBuy : MonoBehaviour
     {
         balance.text = "Balance: " + portfolio.Balance.ToString();
     }
+
+    public void ResetInfo()
+    {
+        total.text = "Total: 0";
+        amount.text = "";
+    }
 }
