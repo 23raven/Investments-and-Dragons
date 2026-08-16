@@ -5,9 +5,9 @@ public class Portfolio : MonoBehaviour
 {
     [SerializeField] private int balance;
     [SerializeField] private List<PortfolioItem> stocks = new();
-
+    public int ItemCount => stocks.Count;
     public int Balance => balance;
-
+    public List<PortfolioItem> Items => stocks;
     public void BuyStock(Stock stock, int quantity, int price)
     {
         balance -= quantity * price;
@@ -33,4 +33,6 @@ public class Portfolio : MonoBehaviour
     {
         return stocks[index];
     }
+
+
 }   

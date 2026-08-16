@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class PortfolioElement : MonoBehaviour
 {
-    [SerializeField] private Portfolio portfolio;
-
     [Header("UI")]
     [SerializeField] private Image stockIcon;
     [SerializeField] private TMP_Text stockName;
@@ -15,9 +13,8 @@ public class PortfolioElement : MonoBehaviour
     [SerializeField] private TMP_Text totalInvested;
     [SerializeField] private TMP_Text roi;
 
-    public void Initialize(int index)
+    public void Initialize(PortfolioItem item)
     {
-        PortfolioItem item = portfolio.GetItem(index);
         Stock stock = item.Stock;
 
         stockIcon.sprite = stock.StockIcon;
@@ -31,7 +28,13 @@ public class PortfolioElement : MonoBehaviour
 
         totalInvested.text = invested.ToString();
 
-        float roiValue = ((float)(currentValue - invested) / invested) * 100f;
+        float roiValue = 0f;
+
+        if (invested > 0)
+        {
+            roiValue = ((float)(currentValue - invested) / invested) * 100f;
+        }
+
         roi.text = roiValue.ToString("F1") + "%";
     }
 }
