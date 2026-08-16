@@ -9,5 +9,15 @@ public class StockPage : MonoBehaviour
     [SerializeField] private TMP_Text description;
     [SerializeField] private TMP_Text currentPrice;
 
-        
+    private Stock stock;
+
+    public void Initialize(Stock stock)
+    {
+        this.stock = stock;
+
+        stockImage.sprite = stock.StockIcon;
+        stockName.text = stock.StockName;
+        description.text = stock.StockDescription;
+        currentPrice.text = "Price:" + stock.CurrentPrice.ToString();
+    }
 }
