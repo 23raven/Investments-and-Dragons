@@ -72,4 +72,19 @@ public class StockBuy : MonoBehaviour
         }
     }
 
+    public void BuyStock()
+    {
+        Stock stock = stockPage.Stock;
+
+        int quantity = int.Parse(amount.text);
+
+        if (totalPrice > portfolio.Balance)
+            return;
+
+        portfolio.BuyStock(
+            stock,
+            quantity,
+            stock.CurrentPrice
+        );
+    }
 }
