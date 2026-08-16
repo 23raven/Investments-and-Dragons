@@ -13,6 +13,11 @@ public class TabManager : MonoBehaviour
         }
     }
 
+    public void OpenSoftTab(GameObject tab)
+    {
+        tab.SetActive(true);
+    }
+
     public void CloseTab(GameObject tab)
     {
         tab.SetActive(false);
