@@ -1435,7 +1435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1268158356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5330188, b: 0.5330188, a: 1}
+  m_Color: {r: 0.7264151, g: 0.2775454, b: 0.2775454, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1589,8 +1589,8 @@ RectTransform:
   - {fileID: 1255174301}
   - {fileID: 1879179986}
   - {fileID: 1643854341}
-  - {fileID: 2097199566}
   - {fileID: 1268158356}
+  - {fileID: 2097199566}
   m_Father: {fileID: 1525632767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1702,8 +1702,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2020,6 +2020,8 @@ MonoBehaviour:
   currentPrice: {fileID: 792612434}
   amount: {fileID: 1421444482}
   total: {fileID: 1879179987}
+  buyActiveButton: {fileID: 1643854342}
+  buyInactiveButton: {fileID: 1268158357}
   portfolio: {fileID: 1669959001}
 --- !u!1 &1643854340
 GameObject:
@@ -2040,7 +2042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1643854341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2104,7 +2106,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1643854343}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1525632768}
+        m_TargetAssemblyTypeName: StockBuy, Assembly-CSharp
+        m_MethodName: BuyStock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1643854343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3361,7 +3375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3608558462316614357, guid: 74e021ee63e25954196964081271edec, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6242676752504530363, guid: 74e021ee63e25954196964081271edec, type: 3}
       propertyPath: m_IsActive

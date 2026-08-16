@@ -35,12 +35,11 @@ public class StockBuy : MonoBehaviour
 
     public void UpdateTotal(string value)
     {
-        Debug.Log("value: " + value);
-        Debug.Log("amount.text: " + amount.text);
-
-        if (!int.TryParse(value, out int amountINT))
+        if (!int.TryParse(value, out int amountINT) || amountINT <= 0)
         {
             total.text = "Total: 0";
+            buyActiveButton.gameObject.SetActive(false);
+            buyInactiveButton.gameObject.SetActive(true);
             return;
         }
 
@@ -86,5 +85,13 @@ public class StockBuy : MonoBehaviour
             quantity,
             stock.CurrentPrice
         );
+
+        UpdateBalance();
+        checkIfCanBuy(totalPrice, portfolio.Balance);
+    }
+
+    public void UpdateBalance()
+    {
+        balance.text = "Balance: " + portfolio.Balance.ToString();
     }
 }
