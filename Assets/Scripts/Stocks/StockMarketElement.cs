@@ -20,11 +20,27 @@ public class StockMarketElement : MonoBehaviour
 
         stockIcon.sprite = stock.StockIcon;
         stockName.text = stock.StockName;
+
+        UpdatePrice();
+
+        stock.OnPriceChanged += UpdatePrice;
+    }
+
+    private void UpdatePrice()
+    {
         currentPrice.text = stock.CurrentPrice.ToString();
     }
 
     public void OpenStockPage()
     {
         tabManager.OpenStockPage(stock);
+    }
+
+    private void OnDestroy()
+    {
+        if (stock != null)
+        {
+            stock.OnPriceChanged -= UpdatePrice;
+        }
     }
 }

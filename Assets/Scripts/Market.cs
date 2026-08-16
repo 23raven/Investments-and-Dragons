@@ -23,4 +23,12 @@ public class Market : MonoBehaviour
             element.Initialize(stock, tabManager);
         }
     }
+
+    public void ResetStocks()
+    {
+        foreach (Stock stock in stocks)
+        {
+            stock.Reset();
+        }
+    }
 }
