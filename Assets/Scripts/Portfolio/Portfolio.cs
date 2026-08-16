@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Portfolio : MonoBehaviour
 {
-    private int balance;
+    [SerializeField] private int balance = 1000;
     [SerializeField] private List<PortfolioItem> stocks = new();
 
     public int Balance => balance;

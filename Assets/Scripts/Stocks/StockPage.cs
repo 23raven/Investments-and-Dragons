@@ -10,7 +10,7 @@ public class StockPage : MonoBehaviour
     [SerializeField] private TMP_Text currentPrice;
 
     private Stock stock;
-
+    public Stock Stock => stock;
     public void Initialize(Stock stock)
     {
         this.stock = stock;
