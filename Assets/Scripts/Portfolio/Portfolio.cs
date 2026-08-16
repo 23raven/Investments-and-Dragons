@@ -28,4 +28,9 @@ public class Portfolio : MonoBehaviour
             stocks.Add(new PortfolioItem(stock, quantity, price));
         }
     }
+
+    public PortfolioItem GetItem(int index)
+    {
+        return stocks[index];
+    }
 }   
