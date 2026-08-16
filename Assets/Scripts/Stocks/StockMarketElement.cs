@@ -4,23 +4,27 @@ using UnityEngine.UI;
 
 public class StockMarketElement : MonoBehaviour
 {
-    [SerializeField] private Stock stock;
     [SerializeField] private Image stockIcon;
     [SerializeField] private TMP_Text stockName;
     [SerializeField] private TMP_Text currentPrice;
-    [SerializeField] private StockPage stockPage;
 
+    private Stock stock;
+    private TabManager tabManager;
 
-    private void Start()
+    public Stock Stock => stock;
+
+    public void Initialize(Stock stock, TabManager tabManager)
     {
-        Initialize(stock);
-    }
+        this.stock = stock;
+        this.tabManager = tabManager;
 
-    private void Initialize(Stock stock)
-    {
         stockIcon.sprite = stock.StockIcon;
         stockName.text = stock.StockName;
         currentPrice.text = stock.CurrentPrice.ToString();
     }
 
+    public void OpenStockPage()
+    {
+        tabManager.OpenStockPage(stock);
+    }
 }

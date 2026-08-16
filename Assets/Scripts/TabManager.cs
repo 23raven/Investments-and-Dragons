@@ -4,6 +4,7 @@ using UnityEngine;
 public class TabManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> tabs;
+    [SerializeField] private StockPage stockPage;
 
     public void OpenTab(GameObject tab)
     {
@@ -21,5 +22,11 @@ public class TabManager : MonoBehaviour
     public void CloseTab(GameObject tab)
     {
         tab.SetActive(false);
+    }
+
+    public void OpenStockPage(Stock stock)
+    {
+        stockPage.Initialize(stock);
+        OpenTab(stockPage.gameObject);
     }
 }
