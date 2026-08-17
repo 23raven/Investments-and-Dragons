@@ -35,5 +35,29 @@ public class Portfolio : MonoBehaviour
         return stocks[index];
     }
 
+    public PortfolioItem GetItem(Stock stock)
+    {
+        return stocks.Find(item => item.Stock == stock);
+    }
+
+    public void SellStock(Stock stock, int quantity, int price)
+    {
+        PortfolioItem item = GetItem(stock);
+
+        if (item == null)
+            return;
+
+        if (quantity > item.Quantity)
+            return;
+
+        balance += quantity * price;
+        item.Quantity -= quantity;
+
+        if (item.Quantity == 0)
+        {
+            stocks.Remove(item);
+        }
+    }
+
 
 }   
