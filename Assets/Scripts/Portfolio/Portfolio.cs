@@ -5,6 +5,7 @@ public class Portfolio : MonoBehaviour
 {
     [SerializeField] private int balance;
     [SerializeField] private List<PortfolioItem> stocks = new();
+    public List<PortfolioItem> Stocks => stocks;
     public int ItemCount => stocks.Count;
     public int Balance => balance;
     public List<PortfolioItem> Items => stocks;

@@ -5,6 +5,7 @@ public class PortfolioPage : MonoBehaviour
     [SerializeField] private Portfolio portfolio;
     [SerializeField] private PortfolioElement elementPrefab;
     [SerializeField] private Transform content;
+    [SerializeField] private PortfolioInfoPanel panel;
 
     private void OnEnable()
     {
@@ -13,6 +14,7 @@ public class PortfolioPage : MonoBehaviour
 
     private void Initialize()
     {
+        panel.Initialize();
         Clear();
 
         foreach (PortfolioItem item in portfolio.Items)

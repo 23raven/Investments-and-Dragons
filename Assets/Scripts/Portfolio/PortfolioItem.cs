@@ -11,4 +11,17 @@ public class PortfolioItem
         Quantity = quantity;
         AveragePurchasePrice = price;
     }
+
+    public float ROI
+    {
+        get
+        {
+            if (AveragePurchasePrice <= 0)
+                return 0;
+
+            return ((float)(Stock.CurrentPrice - AveragePurchasePrice)
+                    / AveragePurchasePrice) * 100f;
+        }
+    }
+
 }

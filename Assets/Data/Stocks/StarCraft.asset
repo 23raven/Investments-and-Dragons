@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Stock
   id: 0
   defaultPrice: 80
-  currentPrice: 0
+  currentPrice: 80
   stockName: StarCraft
-  stockIcon: {fileID: 21300000, guid: 05ded729158cee14e88fa4278d7bf56f, type: 3}
+  stockIcon: {fileID: 21300000, guid: d567fabe46d42654abe269057db19f34, type: 3}
   stockDescription: DESCR DFD ALOOO KAK TY BRAT DESCR DFD ALOOO KAK TY BRAT DESCR
     DFD ALOOO KAK TY BRAT
-  priceHistory: 00000000
+  priceHistory: 50000000

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Stock
   id: 1
   defaultPrice: 40
-  currentPrice: 0
+  currentPrice: 40
   stockName: WarCraft
   stockIcon: {fileID: 21300000, guid: 88bd1ee8f6a658d4da03ee7f145aa1cf, type: 3}
   stockDescription: 'WARCRAFT DEP KOISAM WARCRAFT DEP KOISAM WARCRAFT DEP KOISAM
     WARCRAFT DEP KOISAM '
-  priceHistory: 00000000
+  priceHistory: 28000000
