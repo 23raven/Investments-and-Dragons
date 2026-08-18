@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private EventsManager eventsManager;
 
+    private const int MaxSteps = 6;
+
     private int currentStep = 1;
 
     public int CurrentStep => currentStep;
@@ -17,14 +19,27 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Step " + currentStep);
 
-        eventsManager.PrepareEvent();
+        // На последнем шаге будущего события уже нет
+        if (currentStep < MaxSteps)
+        {
+            eventsManager.PrepareEvent();
 
-        Debug.Log("Next event: " + eventsManager.CurrentEvent.EventName);
+            Debug.Log(
+                "Next event: " +
+                eventsManager.CurrentEvent.EventName
+            );
+        }
     }
 
     public void NextStep()
     {
         ResolveCurrentEvent();
+
+        if (currentStep >= MaxSteps)
+        {
+            FinishGame();
+            return;
+        }
 
         currentStep++;
 
@@ -33,6 +48,10 @@ public class GameManager : MonoBehaviour
 
     private void ResolveCurrentEvent()
     {
+        // На первом шаге ещё нет произошедшего события
+        if (currentStep == 1)
+            return;
+
         bool eventHappened = eventsManager.ResolveEvent();
 
         if (eventHappened)
@@ -51,5 +70,13 @@ public class GameManager : MonoBehaviour
                 eventsManager.CurrentEvent.EventName
             );
         }
+    }
+
+    private void FinishGame()
+    {
+        Debug.Log("Game Finished!");
+
+        // Здесь позже откроем финальный экран
+        // и покажем "Успех инвестиционной стратегии"
     }
 }
