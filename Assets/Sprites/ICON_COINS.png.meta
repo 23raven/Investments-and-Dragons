@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: beff05f380131b34cb84f6eca583a84a
+guid: 34a22d071dca0f14c98ab5ba233d5206
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4658147439689794069
-    second: ICON_PORTFOLIO (1)_0
+      213: -1821268910007226433
+    second: ICON_COINS_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ICON_PORTFOLIO (1)_0
+      name: ICON_COINS_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bedf4e1659fea5fb0800000000000000
-      internalID: -4658147439689794069
+      spriteID: fbf6e8a639d89b6e0800000000000000
+      internalID: -1821268910007226433
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ICON_PORTFOLIO (1)_0: -4658147439689794069
+      ICON_COINS_0: -1821268910007226433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

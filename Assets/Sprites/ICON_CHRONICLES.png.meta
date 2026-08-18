@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63815f8d8c99f794a9b8a48c61108175
+guid: b3f5ab2d75839694080260f66e0bcff6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6917715238345459193
-    second: ICON_CHRONICLES_0
+      213: 5231737115353232421
+    second: ICON_CHRONICLES (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ICON_CHRONICLES_0
+      name: ICON_CHRONICLES (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70abc1174a65fff90800000000000000
-      internalID: -6917715238345459193
+      spriteID: 5243bdeff2dda9840800000000000000
+      internalID: 5231737115353232421
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ICON_CHRONICLES_0: -6917715238345459193
+      ICON_CHRONICLES (1)_0: 5231737115353232421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
