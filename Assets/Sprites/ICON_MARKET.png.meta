@@ -3,8 +3,8 @@ guid: 5e4aee93170522f4da177289de31c683
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4248230820118996841
-    second: ICON_MARKET (1)_0
+      213: -4110714052938575557
+    second: ICON_MARKET_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ICON_MARKET (1)_0
+      name: ICON_MARKET_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 798d0f2c3904b05c0800000000000000
-      internalID: -4248230820118996841
+      spriteID: b31d36d295fc3f6c0800000000000000
+      internalID: -4110714052938575557
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ICON_MARKET (1)_0: -4248230820118996841
+      ICON_MARKET_0: -4110714052938575557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
